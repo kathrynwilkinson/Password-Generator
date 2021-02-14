@@ -57,10 +57,19 @@ function generatePassword() {
   }
   if (upperConfirm != true && lowerConfirm != true &&
     numberConfirm != true && symbolConfirm != true) {
-      alert("Select any password option and specify the length");
+      alert("Select any password option and specify the length"); //check edge cases
   } 
 console.log(chosenValues)
 
+ // Random generator function
+ var generatedPassword = "";
+
+ for (var x = 0; x < lengthConfirm; x++) {
+   generatedPassword += chosenValues[Math.floor(Math.random() * chosenValues.length -1)];
+  
+ } 
+ console.log(generatedPassword)
+return generatedPassword;
 }
 
 // Add event listener to generate button
