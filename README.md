@@ -18,11 +18,12 @@ When a user doesn't select required criteria for a secure password to be generat
 
 ### Visuals
 
-![screenshot on page load](./assests/images/)
+![screenshotPageLoad](./assets/images/pageload.png)
 
-![screenshot prompts](./assests/images/)
+![screenshotPrompts](./assets/images/promptDep.png)
 
-![screenshot generated password](./assests/images/)
+![screenshotGeneratedPassword](./assets/images/generatedpassword.png)
 
 ### Links
 
+[DeployedApp] (<https://nahco-code.github.io/PasswordGenerator/>)
