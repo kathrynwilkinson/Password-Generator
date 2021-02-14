@@ -36,7 +36,31 @@ function generatePassword() {
     var lowerConfirm = window.confirm("Would you like to use lowercase letters?");
     var numberConfirm = window.confirm("Would you like to use numbers?");
     var symbolConfirm = window.confirm("Would you like to use symbols?");
+  }else { //check edge cases
+    alert("Length must be 8-128 characters. Please try again.")
   }
+
+  // Build master charset from selected types // access object keys
+  var chosenValues = "";
+
+  if (upperConfirm) {
+    chosenValues += passKeys.uppercase
+  }
+  if (lowerConfirm) {
+    chosenValues += passKeys.lowercase
+  }
+  if (numberConfirm) {
+    chosenValues += passKeys.number
+  }
+  if (symbolConfirm) {
+    chosenValues += passKeys.symbol
+  }
+  if (upperConfirm != true && lowerConfirm != true &&
+    numberConfirm != true && symbolConfirm != true) {
+      alert("Select any password option and specify the length");
+  } 
+console.log(chosenValues)
+
 }
 
 // Add event listener to generate button
