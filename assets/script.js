@@ -28,16 +28,16 @@ function writePassword() {
 function generatePassword() {
 
   // Prompt for password length
-  var lengthConfirm = window.prompt("How long would like your password to be? Min: 8 Max: 128");
+  var lengthConfirm = window.prompt("How many characters should your password include? Please enter a number between 8 and 128. Okay to continue.");
 
   // Confirm all types of char
   if (lengthConfirm >= 8 && lengthConfirm <= 128) {
-    var upperConfirm = window.confirm("Would you like to use uppercase letters?");
-    var lowerConfirm = window.confirm("Would you like to use lowercase letters?");
-    var numberConfirm = window.confirm("Would you like to use numbers?");
-    var symbolConfirm = window.confirm("Would you like to use symbols?");
+    var upperConfirm = window.confirm("Include uppercase letters? Cancel to continue without uppercase.");
+    var lowerConfirm = window.confirm("Include lowercase letters? Cancel to continue without lowercase.");
+    var numberConfirm = window.confirm("Include numbers? Cancel to continue without numbers.");
+    var symbolConfirm = window.confirm("Include special characters? Cancel to continue without special characters.");
   }else { //check edge cases
-    alert("Length must be 8-128 characters. Please try again.")
+    alert("Password must be 8-128 characters long. Please try again.")
   }
 
   // Build master charset from selected types // access object keys
